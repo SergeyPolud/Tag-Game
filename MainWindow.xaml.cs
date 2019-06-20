@@ -61,7 +61,7 @@ namespace WpfApplication
             UIElement uiElement = null;
             foreach(UIElement element in tgMap.Children)
             {
-                if((int)element.GetValue(Grid.RowProperty)==posR && (int)element.GetValue(Grid.ColumnProperty) == posC)
+                if((int)element.GetValue(Grid.RowProperty)==posR && (int)element.GetValue(Grid.ColumnProperty) == posC)//
                 {
                     uiElement = element;
                     break;
