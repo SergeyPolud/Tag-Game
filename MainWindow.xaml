@@ -8,9 +8,20 @@
         Title="MainWindow" Height="450" Width="800"
         KeyDown="Window_KeyDown"
         >
+
     <Window.Resources>
         <local:MapManager x:Key="mainMap">
         </local:MapManager>
+        <Style TargetType="Button">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+        
     </Window.Resources>
     <Grid x:Name="mainGrid" x:FieldModifier="public">
         <Grid.RowDefinitions>
@@ -20,7 +31,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" x:Name="tgMap" Margin="50,50,50,50" ShowGridLines="True"  x:FieldModifier="public">
+        <Grid Grid.Column="0" x:Name="tgMap" Margin="50,50,50,50" x:FieldModifier="public">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -33,24 +44,25 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="b0" Grid.Column="0" Grid.Row="0" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b1" Grid.Column="1" Grid.Row="0" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b2" Grid.Column="2" Grid.Row="0" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b3" Grid.Column="3" Grid.Row="0" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b4" Grid.Column="0" Grid.Row="1" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b5" Grid.Column="1" Grid.Row="1" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b6" Grid.Column="2" Grid.Row="1" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b7" Grid.Column="3" Grid.Row="1" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b8" Grid.Column="0" Grid.Row="2" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b9" Grid.Column="1" Grid.Row="2" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b10" Grid.Column="2" Grid.Row="2" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b11" Grid.Column="3" Grid.Row="2" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b12" Grid.Column="0" Grid.Row="3" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b13" Grid.Column="1" Grid.Row="3" Width="50" Height="50" Margin="10,10,10,10"/>
-            <Button x:Name="b14" Grid.Column="2" Grid.Row="3" Width="50" Height="50" Margin="10,10,10,10"/>
+            <Button x:Name="b0" Grid.Column="0" Grid.Row="0" />
+            <Button x:Name="b1" Grid.Column="1" Grid.Row="0" />
+            <Button x:Name="b2" Grid.Column="2" Grid.Row="0" />
+            <Button x:Name="b3" Grid.Column="3" Grid.Row="0" />
+            <Button x:Name="b4" Grid.Column="0" Grid.Row="1" />
+            <Button x:Name="b5" Grid.Column="1" Grid.Row="1" />
+            <Button x:Name="b6" Grid.Column="2" Grid.Row="1" />
+            <Button x:Name="b7" Grid.Column="3" Grid.Row="1" />
+            <Button x:Name="b8" Grid.Column="0" Grid.Row="2" />
+            <Button x:Name="b9" Grid.Column="1" Grid.Row="2" />
+            <Button x:Name="b10" Grid.Column="2" Grid.Row="2"/>
+            <Button x:Name="b11" Grid.Column="3" Grid.Row="2"/>
+            <Button x:Name="b12" Grid.Column="0" Grid.Row="3"/>
+            <Button x:Name="b13" Grid.Column="1" Grid.Row="3"/>
+            <Button x:Name="b14" Grid.Column="2" Grid.Row="3"/>
             <Rectangle x:FieldModifier="public" x:Name="EmptyRect" Grid.Column="3" Grid.Row="3" Width="50" Height="50" Margin="10,10,10,10"/>
         </Grid>
-        <Label x:Name="AttemptCounter" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Top" BorderThickness="1.5" BorderBrush="Black"/>
-
+        
+        <Label x:Name="Clock" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Top" BorderThickness="1.5" BorderBrush="Black" FontWeight="Heavy" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="24"/>
+        <Label x:Name="WinnerIndicator" Grid.Column="1" Width="100" Height="50" VerticalAlignment="Bottom" BorderThickness="1.5" BorderBrush="Black"/>
     </Grid>
 </Window>
